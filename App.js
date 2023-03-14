@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 import Keypad from './components/Keypad';
-import Header from './components/Header';
+
 
 const MemoizedKeypad = React.memo(Keypad);
 
@@ -23,7 +23,6 @@ const App = () => {
   return (
     <View style={styles.container}>
       <View style={styles.calculator}>
-        <Header />
         <TextInput style={styles.display} keyboardType="numeric" value={input} editable={false} />
         <MemoizedKeypad handleClear={handleClear} handleClick={handleClick} handleEqual={handleEqual} />
       </View>
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'black',
   },
   calculator: {
     flex: 1,
@@ -44,12 +43,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   display: {
+    marginTop: 50,
     width: '80%',
-    height: 70,
-    marginVertical: 20,
-    fontSize: 40,
+    height: 100,
+    fontSize: 50,
     textAlign: 'right',
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
     backgroundColor: 'white',
     borderRadius: 5,
   },

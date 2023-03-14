@@ -15,8 +15,8 @@ const Keypad = ({ handleClick, handleClear, handleEqual }) => {
     { label: '2', type: 'digit-button' },
     { label: '3', type: 'digit-button' },
     { label: '-', type: 'operator-button', value: '-' },
-    { label: '0', type: 'digit-button bottom-left-corner' },
-    { label: '=', type: 'fun-button bottom-right-corner', onClick: handleEqual },
+    { label: '0', type: 'digit-button' },
+    { label: '=', type: 'fun-button', onClick: handleEqual },
     { label: 'C', type: 'fun-button', onClick: handleClear },
     { label: '+', type: 'operator-button' },
   ];
@@ -82,12 +82,6 @@ const styles = StyleSheet.create({
   },
   'fun-button': {
     backgroundColor: '#9B51E0',
-  },
-  'bottom-left-corner': {
-    marginBottom: 10,
-  },
-  'bottom-right-corner': {
-    marginRight: 10,
   },
 });
 
