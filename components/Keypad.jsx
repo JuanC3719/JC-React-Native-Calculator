@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 const Keypad = ({ handleClick, handleClear, handleEqual }) => {
-  //calc button config
+
   const buttonConfig = [
     { label: '7', type: 'digit-button' },
     { label: '8', type: 'digit-button' },
